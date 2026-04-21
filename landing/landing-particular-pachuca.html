@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podóloga Particular en Tijuana — Atención Inmediata Sin complicaciones | Pedi Medi</title>
+  <meta name="description" content="Podóloga particular en Tijuana con atención inmediata. Sin complicaciones, sin filas, sin esperas. Agenda hoy por WhatsApp. Pedi Medi — la alternativa que sí funciona.">
+  <link rel="stylesheet" href="landing.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LRKFCEYJXH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LRKFCEYJXH');
+    gtag('config', 'AW-18109484948');
+  </script>
+
+  <style>
+    /* Override: dark-teal accent hero for this landing */
+    :root {
+      --hero-grad: linear-gradient(145deg, #001c22 0%, #002d36 45%, #004a57 100%);
+    }
+
+    /* Comparison table */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+    .compare-table th {
+      padding: 18px 24px;
+      text-align: left;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .compare-table th:first-child {
+      background: var(--teal-deep);
+      color: rgba(255,255,255,0.55);
+      width: 40%;
+    }
+    .compare-table th.col-them {
+      background: #2d2d2d;
+      color: rgba(255,255,255,0.4);
+      width: 30%;
+    }
+    .compare-table th.col-us {
+      background: var(--teal);
+      color: white;
+      width: 30%;
+    }
+    .compare-table td {
+      padding: 16px 24px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.93rem;
+    }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table td:first-child {
+      background: var(--off-white);
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+    .compare-table td.col-them {
+      background: #fafafa;
+      color: #888;
+      text-align: center;
+    }
+    .compare-table td.col-us {
+      background: var(--teal-light);
+      color: var(--teal-deep);
+      font-weight: 600;
+      text-align: center;
+    }
+    .compare-table tr:hover td { filter: brightness(0.97); }
+    .check-green { color: #16A34A; font-size: 1.2rem; }
+    .cross-red   { color: #DC2626; font-size: 1.1rem; }
+
+    /* Pricing section */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media(max-width: 900px){ .pricing-grid { grid-template-columns: repeat(2,1fr); } }
+    @media(max-width: 560px){ .pricing-grid { grid-template-columns: 1fr; } }
+
+    .price-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .price-card:hover {
+      border-color: var(--teal);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+    }
+    .price-card__badge {
+      position: absolute;
+      top: 14px; right: 14px;
+      background: var(--teal-light);
+      color: var(--teal-dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+    .price-card__badge--domicilio {
+      background: #FFF0E9;
+      color: var(--accent);
+    }
+    .price-card__icon { font-size: 1.8rem; line-height: 1; }
+    .price-card__name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-top: 4px;
+    }
+    .price-card__desc {
+      font-size: 0.86rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .price-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 8px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .price-card__price {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      color: var(--teal-deep);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .price-card__price small {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      font-family: var(--font-body);
+      font-weight: 400;
+      display: block;
+      margin-top: 2px;
+    }
+    .price-card__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #25D366;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+    .price-card__cta:hover { background: #20b858; transform: scale(1.03); }
+    .pricing-note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    .pricing-note a { color: var(--teal-dark); font-weight: 600; }
+
+    /* Value proposition cards */
+    .vp-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media(max-width:600px){ .vp-grid { grid-template-columns: 1fr; } }
+
+    .vp-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .vp-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-sm);
+    }
+    .vp-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--teal), var(--teal-dark));
+    }
+    .vp-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+    }
+    .vp-card p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.65;
+    }
+
+    /* Hero left override */
+    .hero__left {
+      background: var(--hero-grad);
+    }
+
+    /* Social proof bar */
+    .sp-bar {
+      background: #fff8f5;
+      border-top: 3px solid var(--accent);
+      padding: 22px 0;
+    }
+    .sp-bar__inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .sp-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      font-weight: 500;
+    }
+    .sp-item svg { color: var(--accent); }
+  </style>
+
+<link rel="shortcut icon" href="/assets/logo.webp" type="image/x-icon">
+
+</head>
+<body>
+
+<!-- Floating Info Flyer -->
+<div id="priceFlyer" class="price-flyer">
+  <div class="price-flyer__inner">
+    <span class="price-flyer__icon">📋</span>
+    <p class="price-flyer__text">Cada caso es diferente. Escríbenos por WhatsApp para recibir una valoración personalizada y conocer las opciones de tratamiento ideales para ti.</p>
+  </div>
+</div>
+<style>
+.price-flyer {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  background: linear-gradient(135deg, #004a57, #00707e);
+  color: white;
+  padding: 16px 28px;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  max-width: 480px;
+  width: 90%;
+  animation: flyerSlideUp 0.5s ease-out;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.price-flyer.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+  pointer-events: none;
+}
+.price-flyer__inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.price-flyer__icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.price-flyer__text {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0;
+}
+@keyframes flyerSlideUp {
+  from { opacity: 0; transform: translateX(-50%) translateY(30px); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+</style>
+<script>
+setTimeout(function() {
+  var flyer = document.getElementById('priceFlyer');
+  if (flyer) flyer.classList.add('hidden');
+  setTimeout(function() { if (flyer) flyer.remove(); }, 600);
+}, 4000);
+</script>
+
+<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+<nav class="nav">
+  <div class="container">
+    <div class="nav__inner">
+      <a href="https://podologotijuana.dondeseria.com/" class="nav__brand">
+        <div class="nav__logo-mark">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          </svg>
+        </div>
+        <div>
+          Pedi Medi
+          <span>Tu segunda opinión · Tijuana</span>
+        </div>
+      </a>
+      <a href="https://wa.me/526648211289?text=Hola,%20quiero%20agendar%20cita%20con%20podóloga%20particular%20en%20Tijuana"
+         class="nav__cta"
+         onclick="gtag('event','conversion',{'send_to':'AW-18109484948/KB6uCKe_g6AcEJSfo7tD'})">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        <span>Consultar ahora</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════ HERO ══════════════════════════ -->
+<section class="hero">
+  <div class="hero__left">
+    <div class="urgency-badge">
+      <span class="urgency-dot"></span>
+      Podóloga particular · Atención inmediata
+    </div>
+    <p class="hero__eyebrow">Podóloga Tijuana — Atención Particular</p>
+    <h1 class="hero__h1">
+      Atención <em>inmediata</em>,<br>sin filas y sin<br>trámites 
+    </h1>
+    <p class="hero__sub">
+      En Pedi Medi no hay razón para esperar semanas. Contáctanos hoy y reserva tu consulta con una podóloga acreditada en Tijuana — servicio privado, ágil y con garantía profesional.
+    </p>
+    <div class="hero__actions">
+      <a href="https://wa.me/526648211289?text=Hola,%20quiero%20agendar%20cita%20inmediata%20con%20podóloga%20particular%20en%20Tijuana"
+         class="btn-wa"
+         onclick="gtag('event','conversion',{'send_to':'AW-18109484948/KB6uCKe_g6AcEJSfo7tD'})">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Cita hoy — WhatsApp
+      </a>
+      <a href="#por-que" class="btn-outline">
+        Conocer más
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero__trust">
+      <div class="hero__trust-badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+        Sin remisión
+      </div>
+      <div class="hero__trust-badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+        Misma semana
+      </div>
+      <div class="hero__trust-badge">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+        Tijuana y alrededores
+      </div>
+    </div>
+  </div>
+  <div class="hero__right">
+    <div class="hero__video-wrap" id="videoWrap2">
+      <!-- ✏️ REEMPLAZA la ruta del video aquí: cambia ./assets/Video2.mp4 por la ruta real de tu video -->
+      <video id="heroVideo2" autoplay muted loop playsinline
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:1;"
+             oncanplay="document.getElementById('videoOverlay2').style.opacity='0'"
+             onerror="document.getElementById('videoOverlay2').style.opacity='1'">
+        <source src="/assets/Video2.mp4" type="video/mp4">
+      </video>
+      <div id="videoOverlay2" style="
+        position:absolute;inset:0;z-index:2;
+        background-image:url('/assets/portada2.webp');
+        background-size:cover;background-position:center;
+        display:flex;align-items:center;justify-content:center;
+        transition:opacity 0.6s ease;
+      ">
+        <div style="
+          width:72px;height:72px;border-radius:50%;
+          background:rgba(0,184,212,0.9);
+          display:flex;align-items:center;justify-content:center;
+          box-shadow:0 8px 32px rgba(0,0,0,0.3);
+          cursor:pointer;transition:transform 0.2s;
+        " onclick="playHeroVideo('heroVideo2','videoOverlay2')"
+           onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white" style="margin-left:4px"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF BAR -->
+<div class="sp-bar">
+  <div class="container">
+    <div class="sp-bar__inner">
+      <div class="sp-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Respuesta por WhatsApp en minutos
+      </div>
+      <div class="sp-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Cita disponible la misma semana
+      </div>
+      <div class="sp-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Sin burocracia ni intermediarios
+      </div>
+      <div class="sp-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+        Podóloga certificada
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════ COMPARATIVO ════════════════════════ -->
+<section class="section bg-light" id="por-que">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-eyebrow">¿Por qué cambiar?</span>
+      <h2 class="section-h2">Lo que <em>realmente importa</em> cuando buscas podóloga</h2>
+      <p class="section-lead">No todas las alternativas ofrecen el mismo nivel de servicio. Descubre en qué se distingue elegir la atención particular.</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Aspecto</th>
+            <th class="col-them">Clínica general</th>
+            <th class="col-us">Pedi Medi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tiempo de espera para cita</td>
+            <td class="col-them">Semanas o meses</td>
+            <td class="col-us">Esta misma semana</td>
+          </tr>
+          <tr>
+            <td>¿Necesitas hacer trámites?</td>
+            <td class="col-them"><span class="cross-red">✗</span> Filas y papeleos</td>
+            <td class="col-us"><span class="check-green">✓</span> Cero trámites</td>
+          </tr>
+          <tr>
+            <td>Atención a domicilio</td>
+            <td class="col-them">No disponible</td>
+            <td class="col-us">Disponible en Tijuana</td>
+          </tr>
+          <tr>
+            <td>Podóloga certificada</td>
+            <td class="col-them">Variable</td>
+            <td class="col-us"><span class="check-green">✓</span> Siempre</td>
+          </tr>
+          <tr>
+            <td>Instrumental esterilizado</td>
+            <td class="col-them">Variable</td>
+            <td class="col-us"><span class="check-green">✓</span> Protocolo completo</td>
+          </tr>
+          <tr>
+            <td>Contacto directo por WhatsApp</td>
+            <td class="col-them">No disponible</td>
+            <td class="col-us"><span class="check-green">✓</span> Respuesta en minutos</td>
+          </tr>
+          <tr>
+            <td>Seguimiento post-tratamiento</td>
+            <td class="col-them">No incluido</td>
+            <td class="col-us"><span class="check-green">✓</span> Incluido sin costo extra</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ PROPUESTA VALOR ════════════════════ -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-eyebrow">Lo que nos hace diferentes</span>
+      <h2 class="section-h2">Cuatro razones para elegir <em>Pedi Medi</em></h2>
+    </div>
+    <div class="vp-grid">
+      <div class="vp-card">
+        <h4>⚡ Atención inmediata</h4>
+        <p>Olvídate de aguardar semanas por una consulta. En Pedi Medi nos esforzamos por programarte lo más pronto posible. Contáctanos y en pocos minutos te confirmamos el horario.</p>
+      </div>
+      <div class="vp-card">
+        <h4>🎓 Profesionales certificados</h4>
+        <p>Nuestra especialista posee capacitación avanzada en afecciones podológicas. No se trata de asistente de enfermería ni de técnica de estética — es una profesional con certificación acreditada.</p>
+      </div>
+      <div class="vp-card">
+        <h4>🏠 Clínica y domicilio</h4>
+        <p>Si te resulta más cómodo que acudamos a tu hogar, disponemos de atención a domicilio en Tijuana y zonas aledañas, con idénticos estándares de calidad y bioseguridad que en el consultorio.</p>
+      </div>
+      <div class="vp-card">
+        <h4>🛡️ Bioseguridad total</h4>
+        <p>Cada instrumento pasa por esterilización en autoclave, aplicamos un protocolo de bioseguridad avalado y utilizamos insumos desechables en cada sesión. Tu bienestar es nuestra prioridad absoluta.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CONSULTAR PRECIO ══════════════════════════ -->
+<section class="section bg-white" id="tarifas">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-eyebrow">Solicita información</span>
+      <h2 class="section-h2">Conoce nuestras <em>opciones y costos</em></h2>
+      <p class="section-lead">Atención particular con total transparencia. Cuéntanos tu caso por WhatsApp y te proporcionamos toda la información que necesitas antes de agendar.</p>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="https://wa.me/526648211289?text=Hola%20Pedi%20Medi%2C%20me%20gustar%C3%ADa%20consultar%20precios"
+         class="btn-wa"
+         style="font-size:1.1rem; padding:18px 40px;"
+         onclick="gtag('event','conversion',{'send_to':'AW-18109484948/KB6uCKe_g6AcEJSfo7tD'})">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Consultar Precio
+      </a>
+      <p class="pricing-note" style="margin-top:1.5rem;">La orientación inicial es sin costo ni compromiso. Escríbenos y con gusto te ayudamos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ IMAGEN + BENEFICIOS ════════════════════ -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="split">
+      <div>
+        <div class="section-header">
+          <span class="section-eyebrow">La diferencia Pedi Medi</span>
+          <h2 class="section-h2">Una podóloga que <em>te escucha</em><br>y da resultados reales</h2>
+          <p class="section-lead">Entendemos que muchos pacientes llegan tras vivir experiencias decepcionantes en otros consultorios. Nuestro compromiso es que esta sea la última vez que necesites buscar una podóloga.</p>
+        </div>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <p><strong>Orientación inicial sin costo</strong> — cuéntanos tu situación por WhatsApp y te indicamos si podemos asistirte, sin que tengas que programar una cita previamente.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <p><strong>Diagnóstico desde tu primera visita</strong> — en la mayoría de los casos, realizamos la evaluación e iniciamos el tratamiento durante la misma consulta.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <p><strong>Plan de tratamiento transparente</strong> — ningún paciente sale del consultorio sin conocer con precisión su diagnóstico, el procedimiento a seguir y las etapas de su recuperación.</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <p><strong>Seguimiento después de tu consulta</strong> — permanecemos en contacto vía WhatsApp para aclarar cualquier inquietud durante tu recuperación, sin cargo adicional.</p>
+          </div>
+        </div>
+      </div>
+      <div class="split__visual">
+        <img
+          src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80"
+          alt="Podóloga particular Tijuana Pedi Medi atención inmediata"
+          loading="lazy"
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ TESTIMONIOS ════════════════════════ -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-eyebrow">Pacientes que nos eligieron</span>
+      <h2 class="section-h2">Tijuananos que encontraron <em>la atención que merecían</em></h2>
+    </div>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>Antes acudí a otro consultorio donde me ofrecían cita hasta dentro de un mes. En Pedi Medi me recibieron en tres días. La diferencia en calidad y velocidad se percibe desde el instante en que llegas.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SM</div>
+          <div>
+            <div class="testimonial-author-name">Sandra M.</div>
+            <div class="testimonial-author-meta">Tijuana · Tratamiento uñas</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>Acudí porque necesitaba otra perspectiva profesional. La podóloga fue muy clara, me detalló el diagnóstico a fondo y el tratamiento fue exactamente lo que mi caso requería. Sin vueltas ni ambigüedades.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">FG</div>
+          <div>
+            <div class="testimonial-author-name">Fernando G.</div>
+            <div class="testimonial-author-meta">Tijuana Otay · Pie diabético</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>Mi madre tiene muy poca movilidad. El servicio a domicilio fue extraordinario: llegaron a la hora exacta, con todo su equipamiento esterilizado y mi madre quedó muy contenta con la atención que recibió.</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">DV</div>
+          <div>
+            <div class="testimonial-author-name">Diana V.</div>
+            <div class="testimonial-author-meta">Playas de Tijuana · Servicio a domicilio</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════ HIGHLIGHT ══════════════════════════ -->
+<section class="section-sm bg-light">
+  <div class="container">
+    <div class="highlight-box">
+      <h3>¿Llevas tiempo buscando la podóloga indicada?</h3>
+      <p>Gran parte de nuestros pacientes acuden luego de meses buscando una alternativa de confianza en Tijuana, independiente del sistema de salud público. Si esa es tu situación, escríbenos hoy — en Pedi Medi la conversación inicial es gratuita y sin obligación alguna.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <span class="section-eyebrow">Preguntas frecuentes</span>
+      <h2 class="section-h2">Lo que necesitas <em>saber antes</em> de venir</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Qué diferencia hay entre atención particular y una clínica general?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-answer">Al optar por la atención particular, eliminas las colas, los prolongados tiempos de espera y la burocracia. Cubres directamente tu consulta y accedes a un servicio de calidad al instante, sin sujetarte a agendas sobrecargadas ni papeleo.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Puedo agendar para esta misma semana?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-answer">En la mayoría de los casos, sí. Envíanos un WhatsApp y te informamos sobre el horario más próximo con disponibilidad. Nuestra meta es que no debas esperar más de lo indispensable.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Qué debo llevar a la primera consulta?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-answer">Solo tus pies y tus dudas. No requieres pase médico ni análisis previos para tu primera visita. Si cuentas con historial clínico o diagnósticos anteriores, puedes traerlos — nos resultan útiles, aunque no son indispensables.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Cuánto cuesta una consulta particular con podóloga?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-answer">La tarifa depende del tipo de servicio y del procedimiento requerido. Escríbenos un WhatsApp describiendo tu situación y te brindamos información personalizada. La orientación previa es completamente gratuita.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          ¿Atienden pacientes mayores o con movilidad reducida?
+          <div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+        </button>
+        <div class="faq-answer">Desde luego. Cuando el paciente presenta dificultades de movilidad, ofrecemos servicio a domicilio en Tijuana y alrededores, con la misma calidad de atención y el mismo equipamiento que empleamos en el consultorio.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ CTA BAND ══════════════════════════ -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="cta-band__h2">No sigas buscando.<br><em style="font-style:italic;color:var(--teal);">Pedi Medi</em> es tu respuesta.</h2>
+    <p class="cta-band__sub">Podóloga particular en Tijuana. Servicio al instante. Sin obstáculos. Sin espera.<br>Basta un mensaje para dar el primer paso.</p>
+    <div class="cta-band__actions">
+      <a href="https://wa.me/526648211289?text=Hola,%20quiero%20agendar%20cita%20con%20un%20podóloga%20particular%20en%20Tijuana"
+         class="btn-wa"
+         onclick="gtag('event','conversion',{'send_to':'AW-18109484948/KB6uCKe_g6AcEJSfo7tD'})">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        Quiero mi cita particular
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ MAPA ══════════════════════════════ -->
+<section class="map-section">
+  <div class="container">
+    <div class="section-header section-header--center" style="margin-bottom:40px;">
+      <span class="section-eyebrow">Encuéntranos</span>
+      <h2 class="section-h2">Estamos en <em>Tijuana</em></h2>
+    </div>
+    <div class="map-grid">
+      <div class="map-embed">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d841.2165345942524!2d-116.98584234722135!3d32.50300677235174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d937a205ee9b3d%3A0x7eb13642190089c6!2sPedi%20Medi!5e0!3m2!1ses-419!2sco!4v1776784561693!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="map-info">
+        <h3>Pedi Medi<br><em style="font-style:italic;color:var(--teal-dark);">Podóloga Particular en Tijuana</em></h3>
+        <div class="map-detail">
+          <div class="map-detail__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <div class="map-detail__text">
+            <p>Dirección</p>
+            <strong>Av. las Palmas 4781-3, Las Palmas, 22106 Tijuana, B.C., México<br>En clínica y a domicilio</strong>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="map-detail__text">
+            <p>Disponibilidad</p>
+            <strong>Lunes a Sábado · Citas flexibles<br>Consulta disponibilidad por WhatsApp</strong>
+          </div>
+        </div>
+        <div class="map-detail">
+          <div class="map-detail__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+          </div>
+          <div class="map-detail__text">
+            <p>Contacto directo</p>
+            <strong><a href="https://wa.me/526648211289" onclick="gtag('event','conversion',{'send_to':'AW-18109484948/KB6uCKe_g6AcEJSfo7tD'})" style="color:var(--teal-dark);">+52 664 821 1289</a></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════════════════════ FOOTER ══════════════════════════ -->
+<footer class="footer-lp">
+  <div class="container">
+    <div class="footer-lp__inner">
+      <div class="footer-lp__brand">
+        Pedi Medi
+        <span>Podóloga Particular · Tijuana México</span>
+      </div>
+      <div class="footer-lp__links">
+        <a href="https://podologotijuana.dondeseria.com/">Sitio principal</a>
+        <a href="landing-uneros-tijuana.html">Uñas Encarnadas</a>
+        <a href="landing-podologo-tijuana.html">Podóloga Tijuana</a>
+        <a href="https://wa.me/526648211289" onclick="gtag('event','conversion',{'send_to':'AW-18109484948/KB6uCKe_g6AcEJSfo7tD'})">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-lp__bottom">
+      <p>© 2026 Pedi Medi. Podóloga Particular en Tijuana. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════ WHATSAPP FLOTANTE ════════════════════ -->
+<a href="https://wa.me/526648211289?text=Hola,%20busco%20podóloga%20particular%20en%20Tijuana%20con%20atención%20inmediata"
+   class="wa-float"
+   title="Atención inmediata — WhatsApp"
+   onclick="gtag('event','conversion',{'send_to':'AW-18109484948/KB6uCKe_g6AcEJSfo7tD'})">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.554 4.122 1.525 5.857L.057 23.858l6.168-1.45A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.742-.502-5.313-1.38l-.38-.22-3.662.862.878-3.572-.248-.394A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script>
+  function playHeroVideo(videoId, overlayId) {
+    var v = document.getElementById(videoId);
+    var o = document.getElementById(overlayId);
+    if (v) {
+      v.play().then(function(){ o.style.opacity = '0'; setTimeout(function(){ o.style.pointerEvents='none'; }, 600); })
+       .catch(function(){ o.style.opacity = '1'; });
+    }
+  }
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
